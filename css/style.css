@@ -330,7 +330,8 @@ a:hover {
 /* MOBILE */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* ridotto da 1.8rem per titolo lungo */
+    line-height: 1.1;
   }
 
   h2 {
