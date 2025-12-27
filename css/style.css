@@ -355,6 +355,10 @@ a:hover {
     font-size: 0.9rem; /* ridotto per mobile */
   }
 
+  .header-inner {
+    height: 50px; /* ridotto da 60px per liberare spazio */
+  }
+
   .section {
     padding: 2rem 0;
   }
@@ -363,7 +367,7 @@ a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 50px; /* aggiornato da 60px */
     left: 0;
     right: 0;
     background: var(--bg-main);
