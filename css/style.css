@@ -340,7 +340,7 @@ a:hover {
   }
 
   .hero {
-    padding-top: 8rem; /* aumentato da 7rem per header fisso */
+    padding-top: 10rem; /* aumentato per spazio extra su mobile */
   }
 
   .hero-meta {
