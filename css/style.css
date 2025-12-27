@@ -354,7 +354,7 @@ a:hover {
   }
 
   .hero {
-    padding-top: 5rem; /* ridotto dato che header non è fisso */
+    padding-top: 20rem; /* aumentato per evitare overlap con header fisso */
     padding-bottom: 4rem; /* aumentato per testo lungo */
   }
 
@@ -371,13 +371,16 @@ a:hover {
   }
 
   .header {
-    position: static; /* non fisso su mobile per evitare sovrapposizione */
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: var(--bg-main);
-    box-shadow: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
   }
 
   .header-inner {
-    height: auto; /* altezza automatica */
+    height: 50px; /* ridotto da 60px per liberare spazio */
   }
 
   .section {
@@ -388,7 +391,7 @@ a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100%; /* relativo al header, non fisso */
+    top: 50px; /* aggiornato da 60px */
     left: 0;
     right: 0;
     background: var(--bg-main);
