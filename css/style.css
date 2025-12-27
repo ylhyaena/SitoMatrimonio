@@ -350,6 +350,10 @@ a:hover {
     font-size: 1rem;
   }
 
+  .logo {
+    font-size: 0.9rem; /* ridotto per mobile */
+  }
+
   .section {
     padding: 2rem 0;
   }
