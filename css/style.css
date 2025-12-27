@@ -140,7 +140,7 @@ a:hover {
 /* HERO */
 .hero {
   padding-top: 8rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem; /* aumentato per testo più lungo */
 }
 
 .hero h1 {
@@ -341,6 +341,7 @@ a:hover {
 
   .hero {
     padding-top: 11rem; /* aumentato ulteriormente per spazio extra */
+    padding-bottom: 4rem; /* aumentato per testo lungo */
   }
 
   .hero-meta {
