@@ -311,6 +311,20 @@ a:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* PLANIMETRIA */
+.planimetria-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.planimetria-image {
+  max-width: 100%;
+  height: auto;
+  transform: rotate(90deg);
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* ANIMATIONS */
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
