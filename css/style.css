@@ -354,7 +354,7 @@ a:hover {
   }
 
   .hero {
-    padding-top: 30rem; /* aumentato a 30rem */
+    padding-top: 5rem; /* ridotto dato che header non è fisso */
     padding-bottom: 4rem; /* aumentato per testo lungo */
   }
 
@@ -370,8 +370,14 @@ a:hover {
     font-size: 0.9rem; /* ridotto per mobile */
   }
 
+  .header {
+    position: static; /* non fisso su mobile per evitare sovrapposizione */
+    background: var(--bg-main);
+    box-shadow: none;
+  }
+
   .header-inner {
-    height: 50px; /* ridotto da 60px per liberare spazio */
+    height: auto; /* altezza automatica */
   }
 
   .section {
@@ -382,7 +388,7 @@ a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px; /* aggiornato da 60px */
+    top: 100%; /* relativo al header, non fisso */
     left: 0;
     right: 0;
     background: var(--bg-main);
