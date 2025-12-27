@@ -338,7 +338,7 @@ a:hover {
   }
 
   .hero {
-    padding-top: 6rem;
+    padding-top: 7rem; /* aumentato da 6rem per evitare sovrapposizione header */
   }
 
   .hero-meta {
