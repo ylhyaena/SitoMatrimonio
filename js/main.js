@@ -1,4 +1,6 @@
-// Menu mobile toggle
+// =======================
+// MENU MOBILE TOGGLE
+// =======================
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');
 
@@ -13,11 +15,12 @@ document.querySelectorAll('.nav-list a').forEach(link => {
   });
 });
 
-// FAQ Accordion
+// =======================
+// FAQ ACCORDION
+// =======================
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
     const answer = button.nextElementSibling;
-    const isOpen = button.classList.contains('open');
 
     // Chiudi tutti gli altri
     document.querySelectorAll('.faq-question.open').forEach(openBtn => {
@@ -33,17 +36,19 @@ document.querySelectorAll('.faq-question').forEach(button => {
   });
 });
 
-// Intersection Observer per fade-in leggero
+// =======================
+// SEZIONI FADE-IN
+// =======================
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.1,
+    threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
   });
 
@@ -52,5 +57,17 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-// Log di inizializzazione
-console.log('Sito matrimonio caricato ✓');
+// =======================
+// HERO PARALLAX LEGGERO
+// =======================
+const hero = document.querySelector('.hero');
+if (hero) {
+  window.addEventListener('scroll', () => {
+    hero.style.transform = `translateY(${window.scrollY * 0.05}px)`;
+  });
+}
+
+// =======================
+// LOG DI INIZIALIZZAZIONE
+// =======================
+console.log('Sito matrimonio – JS caricato ✓');
