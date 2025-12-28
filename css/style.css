@@ -1,12 +1,12 @@
 :root {
-  --bg-main: #f4ede6;        /* beige rosato */
+  --bg-main: #9fb09f; /* salvia */
   --bg-alt: #e9ded3;
 
   --text-main: #2c2c2c;
 
   --accent-primary: #c98c6a; /* terracotta dominante */
   --accent-secondary: #3d5a3d; /* verde bosco */
-  --accent-tertiary: #9fb09f; /* salvia */
+  --accent-tertiary: #f4ede6;        /* beige rosato */
 
   --font-main: 'DM Sans', sans-serif;
 }
