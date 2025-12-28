@@ -1,12 +1,12 @@
 :root {
-  --bg-main: #f7f2ec;        /* beige chiaro */
-  --bg-alt: #efe6dc;         /* beige caldo */
+  --bg-main: #f4ede6;        /* beige rosato */
+  --bg-alt: #e9ded3;
 
-  --text-main: #2f2f2f;
+  --text-main: #2c2c2c;
 
-  --accent-primary: #5f7d6a; /* verde salvia dominante */
-  --accent-secondary: #c48a68; /* terracotta morbido */
-  --accent-tertiary: #3f5f4a; /* verde bosco scuro */
+  --accent-primary: #c98c6a; /* terracotta dominante */
+  --accent-secondary: #3d5a3d; /* verde bosco */
+  --accent-tertiary: #9fb09f; /* salvia */
 
   --font-main: 'DM Sans', sans-serif;
 }
