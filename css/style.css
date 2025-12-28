@@ -57,36 +57,45 @@ main {
   top: 0;
   width: 100%;
   height: 64px;
-  background: rgba(248, 243, 236, 0.9);
+  background: rgba(248, 243, 236, 0.95);
   backdrop-filter: blur(6px);
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .header-inner {
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto;
   padding: 0 1.4rem;
-  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   font-weight: 600;
+  font-size: 1rem;
   color: var(--accent-primary);
 }
 
 /* =======================
-   NAV (VISIBILE SU MOBILE)
+   NAV
 ======================= */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav-list {
+  display: flex;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 1.2rem;
+  align-items: center;
 }
 
 .nav-list a {
@@ -94,6 +103,7 @@ main {
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-list a::after {
@@ -114,8 +124,22 @@ main {
 .nav-list a.cta {
   background: var(--accent-tertiary);
   color: white;
-  padding: 0.4rem 0.8rem;
+  padding: 0.45rem 0.9rem;
   border-radius: var(--radius-small);
+  transition: background 0.3s ease;
+}
+
+.nav-list a.cta:hover {
+  background: var(--accent-secondary);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-main);
 }
 
 /* =======================
@@ -185,6 +209,7 @@ a:hover {
 .hero-text {
   max-width: 620px;
   font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 /* =======================
@@ -251,6 +276,9 @@ a:hover {
   padding: 1.2rem 0;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .faq-question.open {
@@ -269,12 +297,37 @@ a:hover {
 }
 
 /* =======================
+   PLANIMETRIA
+======================= */
+.planimetria-container {
+  text-align: center;
+  margin: 4rem 0 6rem 0;
+}
+
+.planimetria-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-soft);
+  box-shadow: var(--shadow-soft);
+
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+
+@media (max-width: 768px) {
+  .planimetria-image {
+    transform: rotate(0deg);
+  }
+}
+
+/* =======================
    MAP
 ======================= */
 .map iframe {
   width: 100%;
   border-radius: var(--radius-soft);
   box-shadow: var(--shadow-soft);
+  min-height: 300px;
 }
 
 /* =======================
@@ -302,6 +355,53 @@ a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* =======================
+   MOBILE
+======================= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: var(--bg-main);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-list.open {
+    display: flex;
+  }
+
+  .nav-list li {
+    padding: 0.5rem 0;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
   }
 }
 
