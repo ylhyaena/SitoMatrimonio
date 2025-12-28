@@ -1,15 +1,16 @@
 :root {
-  --bg-main: #f5ede3;        /* beige */
-  --bg-alt: #ede5db;         /* beige più scuro */
+  --bg-main: #f7f2ec;        /* beige chiaro */
+  --bg-alt: #efe6dc;         /* beige caldo */
 
-  --text-main: #2b2b2b;
+  --text-main: #2f2f2f;
 
-  --accent-primary: #3d5a3d;  /* verde bosco */
-  --accent-secondary: #c98c6a; /* terracotta */
-  --accent-tertiary: #9fb09f; /* verde salvia */
+  --accent-primary: #5f7d6a; /* verde salvia dominante */
+  --accent-secondary: #c48a68; /* terracotta morbido */
+  --accent-tertiary: #3f5f4a; /* verde bosco scuro */
 
   --font-main: 'DM Sans', sans-serif;
 }
+
 
 * {
   box-sizing: border-box;
