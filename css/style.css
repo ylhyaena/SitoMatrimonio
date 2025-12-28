@@ -1,3 +1,6 @@
+/* =======================
+   VARIABILI
+======================= */
 :root {
   --bg-main: #f8f3ec;
   --bg-alt: #efe4d8;
@@ -17,6 +20,9 @@
   --font-main: 'DM Sans', sans-serif;
 }
 
+/* =======================
+   RESET / BASE
+======================= */
 * {
   box-sizing: border-box;
 }
@@ -33,72 +39,38 @@ body {
   line-height: 1.65;
 }
 
+main {
+  padding-top: 64px; /* spazio per header fixed */
+}
+
 .container {
   max-width: 900px;
   padding: 0 1.4rem;
   margin: 0 auto;
 }
 
-/* SEZIONI */
-.section {
-  padding: 4rem 0;
-}
-
-.section.alt {
-  background: linear-gradient(to bottom, #efe4d8, #f5ede6);
-}
-
-.section.highlight {
-  background: var(--accent-tertiary);
-  color: white;
-}
-
-/* CARD */
-.section .container > *:not(h2):not(p:first-of-type) {
-  margin-top: 1.2rem;
-}
-
-/* TITOLI */
-h1, h2 {
-  margin: 0 0 1rem 0;
-}
-
-h1 {
-  font-size: 2.4rem;
-  line-height: 1.15;
-}
-
-h2 {
-  font-size: 1.9rem;
-  color: var(--accent-primary);
-}
-
-/* LINK */
-a {
-  color: var(--accent-primary);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-secondary);
-}
-
-/* HEADER */
+/* =======================
+   HEADER
+======================= */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(248, 243, 236, 0.85);
+  height: 64px;
+  background: rgba(248, 243, 236, 0.9);
   backdrop-filter: blur(6px);
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.4rem;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 64px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -106,16 +78,20 @@ a:hover {
   color: var(--accent-primary);
 }
 
-/* NAV */
+/* =======================
+   NAV (VISIBILE SU MOBILE)
+======================= */
 .nav-list {
-  display: flex;
-  gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 1.2rem;
 }
 
 .nav-list a {
+  color: var(--text-main);
+  text-decoration: none;
   font-weight: 500;
   position: relative;
 }
@@ -138,18 +114,66 @@ a:hover {
 .nav-list a.cta {
   background: var(--accent-tertiary);
   color: white;
-  padding: 0.45rem 0.9rem;
+  padding: 0.4rem 0.8rem;
   border-radius: var(--radius-small);
 }
 
-.nav-toggle {
-  display: none;
+/* =======================
+   SEZIONI
+======================= */
+.section {
+  padding: 4rem 0;
 }
 
-/* HERO */
+.section.alt {
+  background: linear-gradient(to bottom, #efe4d8, #f5ede6);
+}
+
+.section.highlight {
+  background: var(--accent-tertiary);
+  color: white;
+}
+
+/* =======================
+   TITOLI / TESTO
+======================= */
+h1, h2 {
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--accent-primary);
+}
+
+p {
+  margin: 0.6rem 0;
+}
+
+/* =======================
+   LINK
+======================= */
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* =======================
+   HERO
+======================= */
 .hero {
-  padding-top: 9rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .hero-meta {
@@ -163,7 +187,9 @@ a:hover {
   font-size: 1.05rem;
 }
 
-/* TIMELINE */
+/* =======================
+   TIMELINE
+======================= */
 .timeline {
   list-style: none;
   padding: 0;
@@ -171,12 +197,11 @@ a:hover {
 }
 
 .timeline li {
-  padding: 1rem 1.2rem;
   background: white;
+  padding: 1rem 1.2rem;
   border-radius: var(--radius-soft);
   box-shadow: var(--shadow-soft);
   margin-bottom: 1rem;
-  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -189,7 +214,9 @@ a:hover {
   color: var(--accent-secondary);
 }
 
-/* BUTTON */
+/* =======================
+   BUTTON
+======================= */
 .button {
   display: inline-block;
   padding: 0.85rem 1.6rem;
@@ -209,7 +236,9 @@ a:hover {
   background: var(--accent-secondary);
 }
 
-/* FAQ */
+/* =======================
+   FAQ
+======================= */
 .faq-item {
   background: white;
   border-radius: var(--radius-soft);
@@ -239,23 +268,30 @@ a:hover {
   padding-bottom: 1rem;
 }
 
-/* MAP */
+/* =======================
+   MAP
+======================= */
 .map iframe {
+  width: 100%;
   border-radius: var(--radius-soft);
   box-shadow: var(--shadow-soft);
 }
 
-/* FOOTER */
+/* =======================
+   FOOTER
+======================= */
 .footer {
   text-align: center;
   padding: 2.5rem 1rem;
   font-size: 0.9rem;
 }
 
-/* ANIMAZIONI */
+/* =======================
+   ANIMAZIONI
+======================= */
 .fade-in {
-  animation: fadeIn 0.7s ease-out forwards;
   opacity: 0;
+  animation: fadeIn 0.7s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -264,4 +300,25 @@ a:hover {
     transform: translateY(24px);
   }
   to {
-    opacit
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================
+   DESKTOP
+======================= */
+@media (min-width: 769px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
