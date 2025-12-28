@@ -1,4 +1,18 @@
 // =======================
+// SCROLL PROGRESS BAR
+// =======================
+const scrollBar = document.createElement('div');
+scrollBar.id = 'scrollProgress';
+document.body.appendChild(scrollBar);
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  scrollBar.style.width = scrollPercent + '%';
+});
+
+// =======================
 // MENU MOBILE TOGGLE
 // =======================
 const navToggle = document.querySelector('.nav-toggle');
@@ -8,7 +22,6 @@ navToggle.addEventListener('click', () => {
   navList.classList.toggle('open');
 });
 
-// Chiudi menu quando clicchi su un link
 document.querySelectorAll('.nav-list a').forEach(link => {
   link.addEventListener('click', () => {
     navList.classList.remove('open');
@@ -22,7 +35,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
     const answer = button.nextElementSibling;
 
-    // Chiudi tutti gli altri
     document.querySelectorAll('.faq-question.open').forEach(openBtn => {
       if (openBtn !== button) {
         openBtn.classList.remove('open');
@@ -30,14 +42,13 @@ document.querySelectorAll('.faq-question').forEach(button => {
       }
     });
 
-    // Toggle il corrente
     button.classList.toggle('open');
     answer.classList.toggle('open');
   });
 });
 
 // =======================
-// SEZIONI FADE-IN
+// SEZIONI & IMMAGINI FADE-IN
 // =======================
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
@@ -52,13 +63,13 @@ if ('IntersectionObserver' in window) {
     rootMargin: '0px 0px -50px 0px'
   });
 
-  document.querySelectorAll('.section').forEach(section => {
-    observer.observe(section);
+  document.querySelectorAll('.section, .timeline li, img').forEach(el => {
+    observer.observe(el);
   });
 }
 
 // =======================
-// HERO PARALLAX LEGGERO
+// HERO PARALLAX
 // =======================
 const hero = document.querySelector('.hero');
 if (hero) {
@@ -68,6 +79,6 @@ if (hero) {
 }
 
 // =======================
-// LOG DI INIZIALIZZAZIONE
+// LOG
 // =======================
-console.log('Sito matrimonio – JS caricato ✓');
+console.log('Sito matrimonio – JS dinamico caricato ✓');
