@@ -1,15 +1,15 @@
 :root {
   /* BACKGROUND */
-  --bg-main: #f8f4ee;        /* beige molto chiaro */
-  --bg-alt: #eee6dc;         /* beige caldo */
+  --bg-main: #f8f3ec;        /* beige chiarissimo */
+  --bg-alt: #efe4d8;         /* beige caldo */
 
   /* TESTO */
-  --text-main: #2e2e2e;
+  --text-main: #2d2d2d;
 
   /* ACCENTI */
-  --accent-primary: #4f6f5c;   /* verde salvia (titoli, link) */
-  --accent-secondary: #c68a67; /* terracotta (CTA secondarie) */
-  --accent-tertiary: #2f4f3a;  /* verde bosco (CTA principali) */
+  --accent-primary: #7f9f8c;   /* VERDE SALVIA dominante */
+  --accent-secondary: #cf845e; /* TERRACOTTA deciso */
+  --accent-tertiary: #2f4f3a;  /* VERDE BOSCO (CTA / RSVP) */
 
   --font-main: 'DM Sans', sans-serif;
 }
@@ -41,7 +41,11 @@ body {
 }
 
 .section.alt {
-  background: var(--bg-alt);
+  background: linear-gradient(
+    to bottom,
+    #efe4d8 0%,
+    #f3ece3 100%
+  );
 }
 
 .section.highlight {
@@ -100,6 +104,7 @@ a:hover {
 .logo {
   font-weight: 600;
   font-size: 1rem;
+  color: var(--accent-primary);
 }
 
 .nav {
@@ -130,7 +135,6 @@ a:hover {
 
 .nav-list a.cta:hover {
   background-color: var(--accent-secondary);
-  color: white;
 }
 
 .nav-toggle {
@@ -155,7 +159,7 @@ a:hover {
 
 .hero-meta {
   font-size: 1.1rem;
-  color: var(--accent-primary);
+  color: var(--accent-secondary);
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -186,12 +190,12 @@ a:hover {
   top: 0.5rem;
   width: 8px;
   height: 8px;
-  background: var(--accent-primary);
+  background: var(--accent-secondary);
   border-radius: 50%;
 }
 
 .timeline strong {
-  color: var(--accent-primary);
+  color: var(--accent-secondary);
   font-weight: 600;
 }
 
@@ -246,6 +250,10 @@ a:hover {
 
 .faq-question:hover {
   color: var(--accent-primary);
+}
+
+.faq-question.open {
+  color: var(--accent-secondary);
 }
 
 .faq-question::after {
@@ -355,7 +363,6 @@ a:hover {
 
   h2 {
     font-size: 1.5rem;
-    color: var(--accent-primary);
   }
 
   .hero {
