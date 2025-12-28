@@ -87,6 +87,7 @@ a:hover {
 
 .header-inner {
   display: flex;
+  top: 100;
   justify-content: space-between;
   align-items: center;
   height: 60px;
